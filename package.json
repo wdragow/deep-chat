@@ -4,10 +4,16 @@
   "main": "src/index.js",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.1",
     "blessed": "^0.1.81",
-    "nodemon": "^2.0.7"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2"
   },
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "server": "nodemon src/index.js",
+    "chat": "nodemon src/chat.js"
   }
 }
