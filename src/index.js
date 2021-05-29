@@ -9,7 +9,7 @@ io.on('connection', (socket) => {
         console.log('Usuário desconectado!');
     });
     
-    let eventName = 'deepchat';
+    let eventName = 'deepchatV1.0';
     
     let broadcast = (msg) => socket.broadcast.emit(eventName, msg);
     
