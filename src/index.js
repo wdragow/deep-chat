@@ -3,20 +3,20 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    console.log('Usuário conectado!');
     
     socket.on('disconnect', () => {
-        console.log('user disconnected');
+        console.log('Usuário desconectado!');
     });
     
-    let eventName = 'simple chat message';
+    let eventName = 'Deep Chat v1.0';
     
     let broadcast = (msg) => socket.broadcast.emit(eventName, msg);
     
     socket.on(eventName, (msg, ackFn) => {
-        console.log('message: ' + msg);
+        console.log('> ' + msg);
         // broadcast to other clients after 1.5 seconds
-        setTimeout(broadcast, 1500, msg);
+        setTimeout(broadcast, 1000, msg);
     });
 });
 
