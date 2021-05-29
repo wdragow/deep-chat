@@ -14,6 +14,6 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "server": "nodemon src/index.js",
-    "chat": "nodemon src/chat.js"
+    "chat": "node src/chat.js"
   }
 }
